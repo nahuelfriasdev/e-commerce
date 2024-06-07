@@ -1,0 +1,2 @@
+- que cambie la seccion del layout el de inicio > nuevo, que vaya cambiando dependiendo la categoria
+- agregar filtros dentro del section donde aparece en que seccion esta
