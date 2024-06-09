@@ -1,1 +1,71 @@
-<p>login works!</p>
+<main class="bg-[#e7cda7] flex flex-col justify-center items-center md:h-[100vh]">
+  
+  <section class="bg-white w-[100%] h-[80%] flex flex-col gap-4 p-4 shadow-lg md:w-[80%] md:h-[80%] md:rounded-xl md:grid md:grid-cols-[1fr_auto_1fr]">
+    <div class="flex justify-around md:hidden">
+      <button [ngClass]="{'underline': accion == 'entrar'}" (click)="tipoAccion('entrar')">Entrar</button>
+      <button [ngClass]="{'underline': accion == 'registrar'}" (click)="tipoAccion('registrar')">Registrarse</button>
+    </div>
+    <!-- Login Section -->
+    <article [ngClass]="{'flex flex-col': accion == 'entrar', 'hidden md:flex md:flex-col' : accion == 'registrar'}" class="items-center p-4 md:mt-20">
+      <h3 class="text-2xl mb-4">Entrar</h3>
+      <form class="w-full max-w-sm">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="usuario">
+            Usuario
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="usuario" type="text" placeholder="USUARIO">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Contraseña
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="CONTRASEÑA">
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Iniciar sesión
+          </button>
+        </div>
+      </form>
+    </article>
+    
+    <!-- Divider -->
+    <div class="hidden md:block border-r border-gray-300 h-full"></div>
+    
+    <!-- Register Section -->
+    <article [ngClass]="{'flex flex-col': accion == 'registrar', 'hidden md:flex md:flex-col' : accion == 'entrar'}" class="items-center p-4 md:mt-20 ">
+      <h3 class="text-2xl mb-4">Registrar</h3>
+      <form class="w-full max-w-sm">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="usuario">
+            Usuario
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="regUsuario" type="text" placeholder="USUARIO">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="EMAIL">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="regContraseña">
+            Contraseña
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="regContraseña" type="password" placeholder="CONTRASEÑA">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="repContraseña">
+            Confirmar contraseña
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="repContraseña" type="password" placeholder="CONFIRMAR CONTRASEÑA">
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Registrar
+          </button>
+        </div>
+      </form>
+    </article>
+  </section>
+</main>

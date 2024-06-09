@@ -5,6 +5,7 @@ import { MujeresComponent } from './mujeres/mujeres.component';
 import { HombresComponent } from './hombres/hombres.component';
 import { ChicosComponent } from './chicos/chicos.component';
 import { DeportesComponent } from './deportes/deportes.component';
+import { LoginComponent } from '../auth/login/login.component';
 
 export const INICIO_ROUTES: Routes = [
   {
@@ -13,7 +14,8 @@ export const INICIO_ROUTES: Routes = [
       {path: 'mujeres', component: MujeresComponent},
       {path: 'hombres', component: HombresComponent},
       {path: 'niños', component: ChicosComponent},
-      {path: 'deportes', component: DeportesComponent}
+      {path: 'deportes', component: DeportesComponent},
+      {path: 'auth', component: LoginComponent}
     ]
     
   }
