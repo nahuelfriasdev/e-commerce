@@ -6,6 +6,7 @@ import { HombresComponent } from './hombres/hombres.component';
 import { ChicosComponent } from './chicos/chicos.component';
 import { DeportesComponent } from './deportes/deportes.component';
 import { LoginComponent } from '../auth/login/login.component';
+import { CartComponent } from './cart/cart.component';
 
 export const INICIO_ROUTES: Routes = [
   {
@@ -15,6 +16,7 @@ export const INICIO_ROUTES: Routes = [
       {path: 'hombres', component: HombresComponent},
       {path: 'niños', component: ChicosComponent},
       {path: 'deportes', component: DeportesComponent},
+      {path: 'carrito', component: CartComponent},
       {path: 'auth', component: LoginComponent}
     ]
     

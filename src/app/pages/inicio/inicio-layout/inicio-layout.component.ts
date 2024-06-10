@@ -1,6 +1,6 @@
 import { CommonModule, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-inicio-layout',
