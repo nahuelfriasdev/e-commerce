@@ -20,7 +20,7 @@
       </div>
     
       <div class="flex gap-x-10 items-center">
-        <a class="flex relative" href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+        <a class="flex relative"[routerLink]="['/carrito']" (click)="menu()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
           <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
         </svg><span [ngClass]="{'bg-black text-white' : menuActivo, 'bg-white' : !menuActivo}" class="absolute text-sm rounded-full  px-2 text-black top-0 left-5 bottom-2">1</span></a>
         
@@ -78,7 +78,7 @@
     <div class="flex gap-x-10 items-center">
       <a class="flex relative" [routerLink]="['/carrito']"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
         <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
-      </svg><span class="absolute text-sm rounded-full bg-white px-2 text-black top-0 left-5 bottom-2">1</span></a>
+      </svg><span class="absolute text-sm rounded-full bg-white px-2 text-black top-0 left-5 bottom-2">{{cantCarrito}}</span></a>
       <a [routerLink]="['/auth']">login</a>
     </div>
   </section>
@@ -89,9 +89,11 @@
   @if (promo) {
     <div id="promo" class="fixed bg-white font-bold border border-black p-4 z-50 bottom-10 left-10 flex gap-2 text-sm">
       <p>Registrate para obtener ofertas y un 20% OFF*</p>
-      <button class="hover:text-red-500" (click)="closePromo()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-      </svg></button>
+      <button class="hover:text-red-500" (click)="closePromo()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+        </svg>
+      </button>
     </div>
   }
   <section class="p-5 flex justify-center border-b-2">
@@ -105,7 +107,8 @@
   <router-outlet />
 </main>
 
-<footer class="p-10 bg-[#181818] bottom-0">
+<footer class="p-10 bg-[#181818] bottom-0 mt-auto">
 
 </footer>
+
 

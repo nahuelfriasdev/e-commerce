@@ -7,6 +7,7 @@ import { ChicosComponent } from './chicos/chicos.component';
 import { DeportesComponent } from './deportes/deportes.component';
 import { LoginComponent } from '../auth/login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { ProductoComponent } from './producto/producto.component';
 
 export const INICIO_ROUTES: Routes = [
   {
@@ -16,6 +17,7 @@ export const INICIO_ROUTES: Routes = [
       {path: 'hombres', component: HombresComponent},
       {path: 'niños', component: ChicosComponent},
       {path: 'deportes', component: DeportesComponent},
+      {path: 'producto/:id', component: ProductoComponent},
       {path: 'carrito', component: CartComponent},
       {path: 'auth', component: LoginComponent}
     ]
