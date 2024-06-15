@@ -16,8 +16,8 @@ export class PrincipalComponent {
 
   item: number = 1
 
-  agregarAlCarrito() {
-    this._carritoService.agregarAlCarrito();
+  agregarAlCarrito(titulo:string, img:string, precio:number) {
+    this._carritoService.agregarAlCarrito(titulo, img ,precio);
   }
 
 }

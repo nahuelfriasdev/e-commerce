@@ -9,46 +9,7 @@
     </a>
     <div class="flex justify-between mt-5 items-center w-full">
       <p>{{ '1000' | currency: 'USD': true }}</p>
-      <button class="bg-[#181818] text-white text-sm p-2 z-10 hover:bg-slate-500" (click)="agregarAlCarrito()">Agregar al Carrito</button>
-    </div>
-  </div>
-  <div class="p-5 z-0 max-w-lg border rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center">
-    <a [routerLink]="['/producto', item]" class="flex flex-col items-center w-full">
-      <img src="../../../../assets/zapas.avif" class="shadow rounded-lg overflow-hidden border">
-      <div class="mt-8">
-        <h4 class="font-bold text-xl">Exercises</h4>
-        <p class="mt-2 text-gray-600">Create Exercises for any subject with the topics you and your students care about.</p>
-      </div>
-    </a>
-    <div class="flex justify-between mt-5 items-center w-full">
-      <p>{{ '1000' | currency: 'USD': true }}</p>
-      <button class="bg-[#181818] text-white text-sm p-2 z-10 hover:bg-slate-500" (click)="agregarAlCarrito()">Agregar al Carrito</button>
-    </div>
-  </div>
-  <div class="p-5 z-0 max-w-lg border rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center">
-    <a [routerLink]="['/producto', item]" class="flex flex-col items-center w-full">
-      <img src="../../../../assets/zapas.avif" class="shadow rounded-lg overflow-hidden border">
-      <div class="mt-8">
-        <h4 class="font-bold text-xl">Exercises</h4>
-        <p class="mt-2 text-gray-600">Create Exercises for any subject with the topics you and your students care about.</p>
-      </div>
-    </a>
-    <div class="flex justify-between mt-5 items-center w-full">
-      <p>{{ '1000' | currency: 'USD': true }}</p>
-      <button class="bg-[#181818] text-white text-sm p-2 z-10 hover:bg-slate-500" (click)="agregarAlCarrito()">Agregar al Carrito</button>
-    </div>
-  </div>
-  <div class="p-5 z-0 max-w-lg border rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center">
-    <a [routerLink]="['/producto', item]" class="flex flex-col items-center w-full">
-      <img src="../../../../assets/zapas.avif" class="shadow rounded-lg overflow-hidden border">
-      <div class="mt-8">
-        <h4 class="font-bold text-xl">Exercises</h4>
-        <p class="mt-2 text-gray-600">Create Exercises for any subject with the topics you and your students care about.</p>
-      </div>
-    </a>
-    <div class="flex justify-between mt-5 items-center w-full">
-      <p>{{ '1000' | currency: 'USD': true }}</p>
-      <button class="bg-[#181818] text-white text-sm p-2 z-10 hover:bg-slate-500" (click)="agregarAlCarrito()">Agregar al Carrito</button>
+      <button class="bg-[#181818] text-white text-sm p-2 z-10 hover:bg-slate-500" (click)="agregarAlCarrito('mujeres', '../../../../assets/zapas.avif', 5000)">Agregar al Carrito</button>
     </div>
   </div>
   
